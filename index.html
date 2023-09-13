@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Todo List Manager</title>
+    <!-- Add Bootstrap CSS and JavaScript -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Add your custom CSS file -->
+    <link rel="stylesheet" type="text/css" href="Assets/style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Todo List Manager</h1>
+    <div id="messages"></div>
+    <form id="task-form">
+        <input type="text" id="task-title" placeholder="Task Title" required maxlength="100">
+        <button type="submit" class="btn btn-primary">Add Task</button>
+    </form>
+    <div id="task-controls">
+        <div class="row">
+            <div class="col-6">
+                <select id="sort-select" class="form-control">
+                    <option value="newest">Newest First</option>
+                    <option value="oldest">Oldest First</option>
+                </select>
+            </div>
+            <div class="col-6">
+                <input type="text" id="search-input" placeholder="Search tasks" class="form-control">
+            </div>
+        </div>
+    </div>
+    <ul id="task-list" class="list-group"></ul>
+</div>
+<script src="Assets/app.js"></script>
+</body>
+</html>
